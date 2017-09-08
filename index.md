@@ -1,10 +1,6 @@
 ## Welcome to Jay Lu's Blog
 
----
-layout: default
-comments: true
-# other options
----
+
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
