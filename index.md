@@ -1,5 +1,3 @@
-## Welcome to Jay Lu's Blog
-
 ---
 　　layout: default
 　　title: Jay Lu's Blog
