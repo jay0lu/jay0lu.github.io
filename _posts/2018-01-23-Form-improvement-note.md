@@ -10,3 +10,7 @@ hidden: Not display.
 message: Only the localization string without label.
 none: None display style.
 ```
+
+Remove `form`
+
+Remove `none` by checking type===object/array
