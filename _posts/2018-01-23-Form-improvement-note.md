@@ -6,9 +6,8 @@ form: New form section display.
 list: List of items/subform.
 item: Form section.
 subform: Form inside a list.
-hidden: Not display.
 message: Only the localization string without label.
-none: None display style.
+nested: Get value "displayProperty", and display that property.
 ```
 
 Remove `form`
