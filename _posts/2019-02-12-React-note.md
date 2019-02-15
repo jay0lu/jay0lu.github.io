@@ -67,3 +67,20 @@ const styles = {
   fontSize:         50
 };
 ```
+
+### Stateless Functional Components and Props
+```
+// Normal way to display a prop using a variable:
+export class MyComponentClass extends React.component {
+  render() {
+  	let title = this.props.title;
+    return <h1>{title}</h1>;
+  }
+}
+
+// Stateless functional component way to display a prop using a variable:
+export const MyComponentClass = (props) => {
+	let title = props.title;
+  return <h1>{title}</h1>;
+}
+```
