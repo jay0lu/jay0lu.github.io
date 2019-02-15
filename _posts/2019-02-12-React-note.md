@@ -59,10 +59,11 @@ export class Menu extends React.Component {
 ```
 
 ### React style
-Style needs to be a string.
+Style needs to be a string or number(assume unit is px)
 ```
 const styles = {
   marginTop:       "20px",
-  backgroundColor: "green"
+  backgroundColor: "green",
+  fontSize:         50
 };
 ```
