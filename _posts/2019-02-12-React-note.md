@@ -84,3 +84,34 @@ export const MyComponentClass = (props) => {
   return <h1>{title}</h1>;
 }
 ```
+
+### PropTypes
+PropTypes are useful for validation and documentation.
+```
+Runner.propTypes = {
+  message:   React.PropTypes.string.isRequired,
+  style:     React.PropTypes.object.isRequired,
+  isMetric:  React.PropTypes.bool.isRequired,
+  miles:     React.PropTypes.number.isRequired,
+  milesToKM: React.PropTypes.func.isRequired,
+  races:     React.PropTypes.array.isRequired
+};
+```
+
+### Controlled vs Uncontrolled
+An uncontrolled component is a component that maintains its own internal state. A controlled component is a component that does not maintain any internal state. Since a controlled component has no state, it must be controlled by someone else.
+
+The fact that `<input />` keeps track of information makes it an uncontrolled component. It maintains its own internal state, by remembering data about itself.
+
+A controlled component, on the other hand, has no memory. If you ask it for information about itself, then it will have to get that information through props. Most React components are controlled.
+
+In React, when you give an `<input />` a value attribute, then something strange happens: the `<input />` BECOMES controlled. It stops using its internal storage. This is a more 'React' way of doing things.
+
+### Lifecycle
+Lifecycle methods are methods that get called at certain moments in a component's life.
+
+You can write a lifecycle method that gets called right before a component renders for the first time.
+
+You can write a lifecycle method that gets called right after a component renders, every time except for the first time.
+
+You can attach lifecycle methods to a lot of different moments in a component's life. This has powerful implications!
