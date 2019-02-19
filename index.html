@@ -3,8 +3,8 @@ layout: default
 title: Jay Lu's Blog
 ---
 
-<h2>{{ page.title }}</h2>
-<p>Full stack developer</p>
+<!-- <h2>{{ page.title }}</h2>
+<p>Full stack developer</p> -->
 <ul>
 	{% for post in site.posts %}
 	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{post.title }}</a></li>
