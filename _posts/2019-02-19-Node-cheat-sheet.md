@@ -1,3 +1,9 @@
+---
+layout: default
+title: Node.js cheat sheet
+comments: true
+---
+
 <!--NodeJS-cheat-sheet-->
 ***
 Fork from [ringcrl/node-point](https://github.com/ringcrl/node-point)
