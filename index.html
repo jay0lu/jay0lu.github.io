@@ -3,9 +3,6 @@ layout: default
 title: Jay Lu's Blog
 ---
 
-<nav>
-	<a href="/about.md">About</a>
-</nav>
 <ul>
 	{% for post in site.posts %}
 	<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{post.title }}</a></li>
