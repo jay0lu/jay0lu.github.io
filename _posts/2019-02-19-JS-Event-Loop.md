@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docker learning note
+title: JS learning note
 comments: true
 ---
 
