@@ -29,6 +29,17 @@ STATICFILES_DIRS = (
 <img src="/static/my_app/example.jpg" alt="My image">
 ```
 
+## Settings.py file
+`[project]/settings.py` ; `INSTALLED_APPS`;
+
+`TEMPLATES` add `        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+`
+
+ `STATICFILES_DIRS` add
+ `    os.path.join(BASE_DIR, 'assets'),
+`
 
 ## Reference
 https://medium.com/labcodes/configuring-django-with-react-4c599d1eae63
+
+https://www.valentinog.com/blog/tutorial-api-django-rest-react/#Django_REST_with_React_what_you_will_learn
