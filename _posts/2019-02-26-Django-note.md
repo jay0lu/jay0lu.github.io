@@ -1,0 +1,34 @@
+---
+layout: default
+title: Django Note
+comments: true
+---
+
+## Static files
+A template containing an image, for example, would be rendered the following way:
+
+- Having the image located at assets/my_app/examples.jpg
+- The settings.py file should have the configuration
+
+```
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),
+)
+```
+
+- The static template tag should be loaded and used to build the images URL
+
+```
+{% load static %}
+<img src="{% static "my_app/example.jpg" %}" alt="My image"/>
+```
+- The HTML should be rendered as
+```
+<img src="/static/my_app/example.jpg" alt="My image">
+```
+
+
+## Reference
+https://medium.com/labcodes/configuring-django-with-react-4c599d1eae63
