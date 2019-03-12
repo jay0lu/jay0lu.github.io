@@ -135,6 +135,13 @@ There are five updating lifecycle methods:
 Whenever a component instance updates, it automatically calls all five of these methods, in order.
 
 ### this.setState()
+Summary:
+- Update to a component state should be done using setState()
+- You can pass an object or a function to setState()
+- Pass a function when you can to update state multiple times
+- Do not depend on this.state immediately after calling setState() and make use of the updater function instead.
+
+
 ```
 this.state.a = 1
 this.setState(a: 2)
