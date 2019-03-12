@@ -140,3 +140,22 @@ this.state.a = 1
 this.setState(a: 2)
 console.log(this.state.a)  //Output 1
 ```
+Because `this.state.a` does not get update until the component has been re-rendered. setState() should be treated asynchronously — in other words, do not always expect that the state has changed after calling setState().
+
+The solution is to use an updater. An updater allows you access the current state and put it to use immediately to update other items. So the changeCount() function will look like this.
+```
+changeCount = () => {
+  this.setState((prevState) => {
+    return { count: prevState.count - 1}
+  })
+}
+```
+
+When use `this.setState()` React calls reconciliation. The reconciliation process is the way React updates the DOM, by making changes to the component based on the change in state. When the request to setState() is triggered, React creates a new tree containing the reactive elements in the component (along with the updated state). This tree is used to figure out how the Search component’s UI should change in response to the state change by comparing it with the elements of the previous tree. React knows which changes to implement and will only update the parts of the DOM where necessary. This is why React is fast.
+
+- We have a search component that displays a search term
+- That search term is currently empty
+- The user submits a search term
+- That term is captured and stored by setState as a value
+- Reconciliation takes place and React notices the change in value
+- React instructs the search component to update the value and the search term is merged in
