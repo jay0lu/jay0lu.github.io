@@ -133,3 +133,10 @@ There are five updating lifecycle methods:
 - componentDidUpdate
 
 Whenever a component instance updates, it automatically calls all five of these methods, in order.
+
+### this.setState()
+```
+this.state.a = 1
+this.setState(a: 2)
+console.log(this.state.a)  //Output 1
+```
