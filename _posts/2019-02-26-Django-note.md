@@ -20,10 +20,10 @@ STATICFILES_DIRS = (
 
 - The static template tag should be loaded and used to build the images URL
 
-
-{% load static %}
-<img src="{% static "my_app/example.jpg" %}" alt="My image"/>
-
+```
+<!-- {% load static %} -->
+<!-- <img src="{% static "my_app/example.jpg" %}" alt="My image"/> -->
+```
 
 - The HTML should be rendered as
 
