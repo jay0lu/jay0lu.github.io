@@ -11,10 +11,10 @@ A template containing an image, for example, would be rendered the following way
 - The settings.py file should have the configuration
 
 ```
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'assets'),
+    os.path.join(BASE_DIR, "assets"),
 )
 ```
 
