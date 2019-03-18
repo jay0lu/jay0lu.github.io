@@ -26,13 +26,30 @@ Due to the way that event handlers are bound in JavaScript, `this.toggleMood()` 
 
 That is why we must bind `this.toggleMood` to this.
 
+Or use arrow function
+```
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { weather: 'sunny' };
+    this.makeSomeFog = this.makeSomeFog.bind(this);
+  }
+
+  makeSomeFog = () => {
+    this.setState({
+      weather: 'foggy'
+    });
+  }
+}
+```
+
 
 ### React re-render
 Any time that you call this.setState(), this.setState() AUTOMATICALLY calls .render() as soon as the state has changed.
 
 
 ### Event handler
-For example, in <form />, onClick will return an event. To handle the event, need to get the event's value. To get the value string, create a event handler `handleClick`. Becaule the handleClick uses this, so need the `constructor` to bind .this.
+For example, in <form />, onClick will return an event. To handle the event, need to get the event's value. To get the value string, create a event handler `handleClick`. Because the handleClick uses this, so need the `constructor` to bind .this.
 ```
 export class Menu extends React.Component {
   constructor(props) {
@@ -59,7 +76,7 @@ export class Menu extends React.Component {
 ```
 
 ### React style
-Style needs to be a string or number(assume unit is px)
+Style needs to be a string or number (assume unit is px)
 ```
 const styles = {
   marginTop:       "20px",
