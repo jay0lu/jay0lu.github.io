@@ -183,3 +183,10 @@ When use `this.setState()` React calls reconciliation. The reconciliation proces
 - That term is captured and stored by setState as a value
 - Reconciliation takes place and React notices the change in value
 - React instructs the search component to update the value and the search term is merged in
+
+***
+
+What are the features of React
+- Virtual DOM instead of real DOM
+- Server-side rendering
+- Uni-direction data flow or databinding
