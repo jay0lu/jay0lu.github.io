@@ -186,7 +186,32 @@ When use `this.setState()` React calls reconciliation. The reconciliation proces
 
 ***
 
-What are the features of React
+### What are the features of React?
 - Virtual DOM instead of real DOM
 - Server-side rendering
 - Uni-direction data flow or databinding
+
+### How virtual DOM works?
+
+A virtual DOM is a node tree, created by render function.
+
+1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+2. Then the difference between the previous DOM representation and the new one is calculated.
+3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.
+
+### Purpose of render()
+Each React component must have a render() mandatorily. It returns a single React element which is the representation of the native DOM component. If more than one HTML element needs to be rendered, then they must be grouped together inside one enclosing tag or React.fragment
+
+### React.Fragment VS div
+- It’s a tiny bit faster and has less memory usage (no need to create an extra DOM node). This only has a real benefit on very large and/or deep trees, but application performance often suffers from death by a thousand cuts. This is one cut less.
+- Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationship, and adding divs in the middle makes it hard to keep the desired layout while extracting logical components.
+- The DOM inspector is less cluttered. :-)
+
+### What is props?
+Props is the shorthand for Properties in React. They are read only. Always pass down from parent to the child to maintaining the unidirectional data flow.
+
+
+### What is the purpose of callback function as an argument of `setState()`?
+The callback function is invoked when setState finished and the component gets rendered. Since setState() is asynchronous the callback function is used for any post action.
+Note: It is recommended to use lifecycle method rather than this callback function.
+`setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))`
