@@ -215,3 +215,9 @@ Props is the shorthand for Properties in React. They are read only. Always pass 
 The callback function is invoked when setState finished and the component gets rendered. Since setState() is asynchronous the callback function is used for any post action.
 Note: It is recommended to use lifecycle method rather than this callback function.
 `setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))`
+
+### How to pass a parameter to an event handler or callback?
+You can use an arrow function to wrap around an event handler and pass parameters:
+`<button onClick={() => this.handleClick(id)} />`
+This is an equivalent to calling .bind:
+`<button onClick={this.handleClick.bind(this, id)} />`
